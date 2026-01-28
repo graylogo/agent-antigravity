@@ -1,7 +1,6 @@
 # Vue 3 + Vite + Pinia Todo App
 
-This is a modern, premium Todo application built with the latest Vue ecosystem technologies.
-使用了最新的vue技术栈来实现。
+使用 `Antigravity IDE` 开发的 Todo App。使用了最新的vue技术栈来实现。
 
 ## Features
 
