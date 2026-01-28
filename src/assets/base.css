@@ -1,0 +1,105 @@
+/* Modern Color Palette & Design System */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+:root {
+  /* HSL Color Space for easy manipulation */
+  --hue-primary: 250;
+  --hue-success: 150;
+  --hue-danger: 340;
+  --hue-warning: 35;
+
+  /* Primary Colors */
+  --c-primary: hsl(var(--hue-primary), 80%, 60%);
+  --c-primary-hover: hsl(var(--hue-primary), 80%, 50%);
+  --c-primary-soft: hsl(var(--hue-primary), 80%, 90%);
+
+  /* Neutrals */
+  --c-white: #ffffff;
+  --c-black: #1a1a1a;
+  
+  --c-gray-50: #f9fafb;
+  --c-gray-100: #f3f4f6;
+  --c-gray-200: #e5e7eb;
+  --c-gray-300: #d1d5db;
+  --c-gray-400: #9ca3af;
+  --c-gray-500: #6b7280;
+  --c-gray-600: #4b5563;
+  --c-gray-700: #374151;
+  --c-gray-800: #1f2937;
+  --c-gray-900: #111827;
+
+  /* Semantic Colors */
+  --c-bg: var(--c-gray-50);
+  --c-bg-card: var(--c-white);
+  --c-text-primary: var(--c-gray-900);
+  --c-text-secondary: var(--c-gray-500);
+  --c-border: var(--c-gray-200);
+  
+  /* Feature Colors */
+  --c-danger: hsl(var(--hue-danger), 80%, 60%);
+  --c-success: hsl(var(--hue-success), 80%, 40%);
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+  
+  /* Radii */
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-full: 9999px;
+
+  /* Transitions */
+  --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 300ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --c-bg: var(--c-gray-900);
+    --c-bg-card: var(--c-gray-800);
+    --c-text-primary: var(--c-gray-50);
+    --c-text-secondary: var(--c-gray-400);
+    --c-border: var(--c-gray-700);
+
+    --c-primary: hsl(var(--hue-primary), 70%, 65%);
+    --c-primary-hover: hsl(var(--hue-primary), 70%, 55%);
+    --c-primary-soft: hsl(var(--hue-primary), 70%, 20%);
+    
+    --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.3);
+    --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.5), 0 2px 4px -2px rgb(0 0 0 / 0.5);
+  }
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  color: var(--c-text-primary);
+  background: var(--c-bg);
+  transition: color var(--transition-normal), background-color var(--transition-normal);
+  line-height: 1.5;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+button, input {
+    font: inherit;
+    color: inherit;
+    border: none;
+    background: transparent;
+}
+
+button {
+    cursor: pointer;
+}
