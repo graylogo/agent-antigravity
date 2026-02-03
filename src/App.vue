@@ -5,6 +5,7 @@ import TodoList from './components/TodoList.vue'
 import TodoFilter from './components/TodoFilter.vue'
 import TodoStats from './components/TodoStats.vue'
 import ThemeToggle from './components/ThemeToggle.vue'
+import GoogleSearchButton from './components/GoogleSearchButton.vue'
 
 const isLoaded = ref(false)
 
@@ -18,6 +19,7 @@ onMounted(() => {
 <template>
   <div class="background-gradient"></div>
   <ThemeToggle class="theme-toggle-fixed" />
+  <GoogleSearchButton class="google-search-fixed" />
   <main class="app-container" :class="{ loaded: isLoaded }">
     <header>
       <h1 class="animated-title">
@@ -36,7 +38,7 @@ onMounted(() => {
     </div>
 
     <footer class="app-footer">
-        <p>Press <kbd>Enter</kbd> to add a task</p>
+        <p>Press <kbd>Enter</kbd> to add a task • <kbd>⌘K</kbd> for Google</p>
     </footer>
   </main>
 </template>
@@ -218,10 +220,30 @@ kbd:hover {
   animation: slideInFromRight 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s both;
 }
 
+/* Google search button */
+.google-search-fixed {
+  position: fixed;
+  top: 2rem;
+  left: 2rem;
+  z-index: 1000;
+  animation: slideInFromLeft 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s both;
+}
+
 @keyframes slideInFromRight {
   from {
     opacity: 0;
     transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInFromLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-100px);
   }
   to {
     opacity: 1;
