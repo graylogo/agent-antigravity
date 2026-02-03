@@ -4,6 +4,7 @@ import TodoInput from './components/TodoInput.vue'
 import TodoList from './components/TodoList.vue'
 import TodoFilter from './components/TodoFilter.vue'
 import TodoStats from './components/TodoStats.vue'
+import ThemeToggle from './components/ThemeToggle.vue'
 
 const isLoaded = ref(false)
 
@@ -16,6 +17,7 @@ onMounted(() => {
 
 <template>
   <div class="background-gradient"></div>
+  <ThemeToggle class="theme-toggle-fixed" />
   <main class="app-container" :class="{ loaded: isLoaded }">
     <header>
       <h1 class="animated-title">
@@ -198,5 +200,32 @@ kbd:hover {
         gap: 1rem;
         align-items: flex-start;
     }
+
+    .theme-toggle-fixed {
+      top: 1rem;
+      right: 1rem;
+    }
+}
+</style>
+
+<style>
+/* Global styles for theme toggle */
+.theme-toggle-fixed {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 1000;
+  animation: slideInFromRight 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) 0.3s both;
+}
+
+@keyframes slideInFromRight {
+  from {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 </style>

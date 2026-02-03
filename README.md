@@ -10,7 +10,9 @@
 - **TypeScript** for type safety
 - **Vanilla CSS** with CSS Variables for a custom, premium design system
 - **LocalStorage Persistence** to save your todos
-- **Animations** for smooth user interactions
+- **Rich Animations** for smooth and delightful user interactions
+- **Theme Switching** - Auto/Light/Dark modes with persistent preference
+- **Drag & Drop** - Reorder tasks with intuitive drag-and-drop
 
 ## Project Setup
 

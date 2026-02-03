@@ -50,18 +50,18 @@ function setRef(el: Element | ComponentPublicInstance | null, index: number) {
   position: relative;
   display: flex;
   gap: 0.5rem;
-  background: var(--c-gray-100);
+  background: var(--c-bg-secondary);
   padding: 0.25rem;
   border-radius: var(--radius-lg);
   width: fit-content;
-  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .filter-indicator {
   position: absolute;
   top: 0.25rem;
   bottom: 0.25rem;
-  background: var(--c-white);
+  background: var(--c-bg-card);
   border-radius: var(--radius-md);
   box-shadow: var(--shadow-sm);
   transition: all 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
@@ -91,15 +91,5 @@ button:active {
 button.active {
   color: var(--c-primary);
   text-shadow: 0 0 20px hsla(var(--hue-primary), 70%, 60%, 0.3);
-}
-
-@media (prefers-color-scheme: dark) {
-  .filters {
-    background: var(--c-gray-800);
-  }
-
-  .filter-indicator {
-    background: var(--c-gray-700);
-  }
 }
 </style>
