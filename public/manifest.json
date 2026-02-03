@@ -1,7 +1,7 @@
 {
   "manifest_version": 3,
   "name": "Todo - New Tab",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "description": "A beautiful and animated Todo app that replaces your new tab page",
   "author": "Antigravity IDE",
   "icons": {
